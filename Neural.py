@@ -1,10 +1,10 @@
 import time
 
 input_value = int(input("Enter a value: "))
-goal = 15
+goal = 158641
 weight = 0.5
 bias = 0.0
-learning_rate = 0.001
+learning_rate = 0.01
 
 
 start = time.time()
@@ -13,7 +13,7 @@ for i in range(1000):
     error = goal - output
     loss = (goal - output) ** 2
 
-    if loss < 0.0001:
+    if loss < 0.0000001:
         break
 
     weight += learning_rate * error * input_value
@@ -22,7 +22,7 @@ for i in range(1000):
     
 end = time.time()
 print("")
-print(f"----------------\n Training took \033[91m{end - start:.6f}\033[0m seconds\n----------------")
+print(f"--------------------------------\n Training took \033[91m{end - start:.6f}\033[0m seconds\n--------------------------------")
 print("Input =", input_value)
 print("Output =", output)
 print("Error =", error)
