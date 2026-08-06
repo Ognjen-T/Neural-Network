@@ -1,7 +1,7 @@
 import time
 
-input_values = [1, 2, 3, 4, 5]
-goals = [5, 10, 15, 20, 25]
+input_values = [1,2,3,4,5,6,7,8,9,10]
+goals = [5,10,15,20,25,30,35,40,45,50]
 weight = 0.5
 bias = 0.0
 learning_rate = 0.01
@@ -35,6 +35,6 @@ test_input = int(input("Enter a test value: "))
 prediction = test_input * weight + bias
 print("")
 print(f"--------------------------------\n Training took \033[91m{end - start:.6f}\033[0m seconds\n--------------------------------")
-print("Weight = ", weight)
-print("Bias = ", bias)
-print("Prediction for ", test_input , " is = " , prediction)
+print(f"Weight = {weight:.6f}")
+print(f"Bias   = {bias:.6f}")
+print(f"Prediction for {test_input} is = {prediction:.15f}")
